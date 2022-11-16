@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Delete Employee</title>
+</head>
+<body>
+<div id="navbar"></div>
+<form th:object="${employee}" method="POST" th:action="@{/delete}">
+
+<input type="number" name="id" required="required" placeholder="Employee ID">
+<button>Delete</button>
+</form>
+
+<script type="text/javascript" th:src="@{/navbar.js}"></script>
+</body>
+</html>

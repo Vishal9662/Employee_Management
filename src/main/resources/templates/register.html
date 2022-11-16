@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org"><head>
+<meta charset="UTF-8">
+<title>Employee Registration</title>
+<style type="text/css">
+
+form{
+text-align:center;
+margin-left:500px; 
+margin-top: 150px;
+margin-right:500px;
+border: 2px solid black;
+font-size: 20px;
+font-weight: bolder;
+}
+
+input{
+border-radius: 5px;
+padding: 5px;
+}
+
+.btn{
+padding: 12px;
+border-radius: 5px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+</style>
+</head>
+
+<body>
+ <div id="navbar"></div>
+        <form th:object="${employee}" method="post" th:action="@{/save}">
+        <h1 style="text-decoration: underline">Employee Registration</h1>
+            <table>
+                <tbody>
+                <tr>
+                    <td>First Name : </td>
+                    <td><input type="text" name="first_name" required="required" placeholder="Enter First Name"></td>
+                </tr>
+                <tr>
+                    <td>Last Name : </td>
+                    <td><input type="text" name="last_name" required="required" placeholder="Enter Last Name"></td>
+                </tr>
+                <tr>
+                    <td>Salary : </td>
+                    <td><input type="number" name="salary" required="required" placeholder="Enter Salary"></td>
+                </tr>
+                <tr>
+                    <td>Department : </td>
+                    <td><input type="text" name="department" required="required" placeholder="Enter Department"></td>
+                </tr>
+                <tr>
+                    <td>Position : </td>
+                    <td><input type="text" name="position" required="required" placeholder="Enter Position "></td>
+                </tr>
+                <tr>
+                    <td>Email-address : </td>
+                    <td><input type="text" name="email_address" required="required" placeholder="Enter Email"></td>
+                </tr>
+                <tr>
+                    <td>Contact-Number : </td>
+                    <td><input type="number" name="contact_number" required="required" placeholder="Enter Number"></td>
+                </tr>
+                
+                  <tr>
+                    <td colspan="2">
+                        <button class="btn">Register</button>
+                    </td>
+                </tr>
+            </tbody></table>
+        </form>
+       
+<script type="text/javascript" th:src="@{/navbar.js}"></script>
+
+</body>
+</html>
