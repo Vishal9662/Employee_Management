@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Update Details</title>
+</head>
+<body>
+<div id="navbar"></div>
+        <form th:object="${employee}" method="GET" th:action="@{/edit}">
+        <h1 style="text-decoration: underline">Update Details</h1>
+            <table>
+                <tbody>
+                <tr>
+                    <td>ID : </td>
+                    <td><input type="number" name="id" required="required" placeholder="Enter ID"></td>
+                </tr>
+                <tr>
+                    <td>First Name : </td>
+                    <td><input type="text" name="first_name" required="required" placeholder="Enter First Name"></td>
+                </tr>
+                <tr>
+                    <td>Last Name : </td>
+                    <td><input type="text" name="last_name" required="required" placeholder="Enter Last Name"></td>
+                </tr>
+                <tr>
+                    <td>Salary : </td>
+                    <td><input type="number" name="salary" required="required" placeholder="Enter Salary"></td>
+                </tr>
+                <tr>
+                    <td>Department : </td>
+                    <td><input type="text" name="department" required="required" placeholder="Enter Department"></td>
+                </tr>
+                <tr>
+                    <td>Position : </td>
+                    <td><input type="text" name="position" required="required" placeholder="Enter Position "></td>
+                </tr>
+                <tr>
+                    <td>Email-address : </td>
+                    <td><input type="text" name="email_address" required="required" placeholder="Enter Email"></td>
+                </tr>
+                <tr>
+                    <td>Contact-Number : </td>
+                    <td><input type="number" name="contact_number" required="required" placeholder="Enter Number"></td>
+                </tr>
+               <!--    <tr>
+                    <td>Upload your photo : </td>
+                    <td><input type="file" name="picture" required="required" /></td>
+                </tr> -->
+                  <tr>
+                    <td colspan="2">
+                        <button class="btn">Update</button>
+                    </td>
+                </tr>
+            </tbody></table>
+        </form>
+       
+<script type="text/javascript" th:src="@{/navbar.js}"></script>
+
+</body>
+</html>
