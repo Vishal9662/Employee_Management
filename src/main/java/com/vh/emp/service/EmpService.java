@@ -12,7 +12,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.vh.emp.model.Employee;
-import com.vh.emp.repository.EmpByPagination;
 import com.vh.emp.repository.EmpRepo;
 
 
@@ -88,18 +87,7 @@ public class EmpService {
 
 	
 	
-	@Autowired
-	private EmpByPagination paginationRepo;
-	
-	public List<Employee> getEmployeeByPage(int pageno, int pagesize) {
-		System.out.println(pageno+","+pagesize);
-		PageRequest page=PageRequest.of(pageno, pagesize);
-		System.out.println(page);
-		Page<Employee> pagedResult=paginationRepo.findAll(page);
-		return pagedResult.toList();
-	}
-	
-	
+		
 	public List<Employee> getDataByPage(int pageNumber,int numberOfRecords)
 	{
 		Pageable firstPageWithTwoElements = PageRequest.of(pageNumber, numberOfRecords);
